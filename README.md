@@ -10,41 +10,31 @@ An angular module for manipulating sprite on mouse move among other mouse event.
 
     also include this as dependency in your app
 
-        ```javascript
         angular.module('app', ['ngMouseSprite'])
-        ```
 
     then you can use this on a canvas as follow
 
-    ###1. to just animate Sprite
-    ```html
+###1. to just animate Sprite
         <div>
             <canvas nga-sprite nga-img-src="/img/prite-animation.png"></canvas>
         </div>
-     ```
 
-    ###2. to animating sprite on mouse movement over the canvas
-        ```html
+###2. to animating sprite on mouse movement over the canvas
         <div>
             <canvas nga-sprite nga-img-src="/img/sprite-animation.png"></canvas>
         </div>
-        ```
+
+###optional attributes for configurations are
+        +`nga-img-src`     // This is the sprite image source. Check how to create a sprite here
+        +`nga-frame-width`     The width of the frame, default is 100.
+        +`nga-frame-height`    The height of the frame, default is 100. It is advisable to make this to be the same height as image height
+        +`nga-img-height`      This is the sprite image height. Default is 100.
+        +`nga-img-width`       This is the sprite image width. Default is 1000.
+        +`ngaNoOfFrame`        This is the number of frame in a sprite sheet. You can specify a less frame than images you have to cut the frames short. This is calculated by default as floor function of nga-img-width/nga-frame-width
+        +`ngaFramesDelay`      This is the delay in between frames. The lesser the delay, the faster the frames animations. The default is 3
 
 
-    ###optional attributes for configurations are
-    ```
-        `nga-img-src`     // This is the sprite image source. Check how to create a sprite here
-        `nga-frame-width`     The width of the frame, default is 100.
-        `nga-frame-height`    The height of the frame, default is 100. It is advisable to make this to be the same height as image height
-        `nga-img-height`      This is the sprite image height. Default is 100.
-        `nga-img-width`       This is the sprite image width. Default is 1000.
-        `ngaNoOfFrame`        This is the number of frame in a sprite sheet. You can specify a less frame than images you have to cut the frames short. This is calculated by default as floor function of nga-img-width/nga-frame-width
-        `ngaFramesDelay`      This is the delay in between frames. The lesser the delay, the faster the frames animations. The default is 3
-    ```
-
-
-    ### Sample usage with options
-        ```html
+### Sample usage with options
         <canvas nga-mouse-sprite=""
             nga-img-src="/img/sprite-animation.png"
             nga-frame-width="100"
@@ -54,7 +44,6 @@ An angular module for manipulating sprite on mouse move among other mouse event.
             nga-no-of-frame="10"
             nga-frames-delay="3">
         </canvas>
-        ```
 
 
     Please check how to create a sprite sheet image here + [https://www.codeandweb.com/texturepacker/tutorials/how-to-create-a-sprite-sheet](here)
@@ -71,8 +60,8 @@ Inspired by javascript work here
 
 
 
-```
-MIT License
+
+###MIT License
 
 Copyright (c) 2017 olyjosh
 
