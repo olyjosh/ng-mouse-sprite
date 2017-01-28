@@ -1,0 +1,22 @@
+{
+  "name": "ng-mouse-sprite",
+  "version": "0.0.1",
+  "description": "An angular module for manipulating sprite on mouse move among other mouse event. Also do simple sprite animation",
+  "main": "ng-mouse-sprite.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olyjosh/ng-mouse-sprite.git"
+  },
+  "keywords": [
+    "ogirima0309"
+  ],
+  "author": "Joshua Aroke (olyjos)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/olyjosh/ng-mouse-sprite/issues"
+  },
+  "homepage": "https://github.com/olyjosh/ng-mouse-sprite#readme"
+}
