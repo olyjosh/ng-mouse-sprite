@@ -11,7 +11,7 @@
     "url": "git+https://github.com/olyjosh/ng-mouse-sprite.git"
   },
   "keywords": [
-    "ogirima0309"
+    "sprite animation", "mouse move sprite", "sprite", "mouse event", "image sprite", "frame sprite"
   ],
   "author": "Joshua Aroke (olyjos)",
   "license": "MIT",

@@ -12,15 +12,15 @@
     var imgWidth = 1000;
     var imgHeigth = 100;
     var loop = true;
-    var noOfFrames = 10;
-    var delay = 4;
+    var noOfFrames = 0;
+    var delay = 3;
 
 
     var app = angular.module('ngMouseSprite', []);
     app.service('sprite', spriteService);
     app.directive('ngaMouseSprite', function (sprite) {  // directive for animating sprite on mouse movement
         return {
-            restrict: 'AE',
+            restrict: 'A',
             link: function ($scope, element, attrs) {
 
                 element.ready(function () {
@@ -38,7 +38,7 @@
 
     app.directive('ngaSprite', function (sprite) {  // directive for animating sprite
         return {
-            restrict: 'AE',
+            restrict: 'A',
             link: function ($scope, element, attrs) {
                 element.ready(function () {
                     auto = true;
@@ -63,7 +63,7 @@
         return {
             restrict: 'A',
             link: function ($scope, element, attrs) {
-                cHeight = attrs.ngaCanvasHeight;
+                cHeight = attrs.ngaFrameHeight;
             }
         };
     });
@@ -132,6 +132,12 @@
 
             // Create sprite sheet
             sprImage = new Image();
+
+            if(noOfFrames==0){
+                var a = imgWidth/cWidth;
+                if(a<1)noOfFrames=1;
+                else noOfFrames= Math.floor(a);
+            }
 
             // Create sprite
             spr = sprite({
